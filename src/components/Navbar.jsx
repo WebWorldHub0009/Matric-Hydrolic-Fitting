@@ -33,15 +33,15 @@ const MatricNavbar = () => {
     { name: "Home", path: "/", icon: <FaHome /> },
     { name: "About Us", path: "/about", icon: <FaInfoCircle /> },
     {
-      name: "Products", dropdown: true, icon: <FaCogs />,
-      items: [
-        { name: "Hydraulic Fittings", path: "/product/hydraulic-fittings" },
-        { name: "Pipes & Hoses", path: "/product/pipes-hoses" },
-        { name: "Valves & Connectors", path: "/product/valves-connectors" },
-        { name: "Adapters & Couplings", path: "/product/adapters-couplings" },
-        { name: "Seals & Rings", path: "/product/seals-rings" },
-        { name: "Pressure Gauges", path: "/product/pressure-gauges" },
-      ],
+      name: "Products", dropdown: true, icon: <FaCogs />
+      // items: [
+      //   { name: "Hydraulic Fittings", path: "/product/hydraulic-fittings" },
+      //   { name: "Pipes & Hoses", path: "/product/pipes-hoses" },
+      //   { name: "Valves & Connectors", path: "/product/valves-connectors" },
+      //   { name: "Adapters & Couplings", path: "/product/adapters-couplings" },
+      //   { name: "Seals & Rings", path: "/product/seals-rings" },
+      //   { name: "Pressure Gauges", path: "/product/pressure-gauges" },
+      // ],
     },
     { name: "Showcase", path: "/video", icon: <FaVideo /> },
     { name: "Contact", path: "/contact", icon: <FaPhoneAlt /> },
