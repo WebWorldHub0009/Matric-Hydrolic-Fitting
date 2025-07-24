@@ -5,7 +5,7 @@ import {
   FaHome, FaInfoCircle, FaCogs, FaPhoneAlt, FaVideo, FaSignOutAlt
 } from "react-icons/fa";
 import { IoChevronDownOutline } from "react-icons/io5";
-// import logo from "../assets/logo-matric.png";
+import logo from "../assets/images/logo.png";
 
 const MatricNavbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -74,7 +74,7 @@ const MatricNavbar = () => {
 
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <img src={""} alt="Matric Logo" className="w-16 md:w-20 object-contain" />
+            <img src={logo} alt="Matric Logo" className="w-16 md:w-20 object-contain" />
             <span className="text-[#0057A8] font-extrabold text-xl md:text-2xl uppercase">
               Matric <span className="text-[#FFD700]">Hydraulic</span>
             </span>

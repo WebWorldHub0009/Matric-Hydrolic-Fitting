@@ -5,20 +5,35 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
+import p1 from '../assets/images/products/p1.jpg';
+import p2 from '../assets/images/products/p2.jpg';
+import p3 from '../assets/images/products/p3.jpg';
+import p4 from '../assets/images/products/p4.jpg';
+import p5 from '../assets/images/products/p5.jpg';
+import p6 from '../assets/images/products/p6.jpg';
+import p7 from '../assets/images/products/p7.jpg';
+import p8 from '../assets/images/products/p8.jpg';
+import p9 from '../assets/images/products/p9.jpg';
+import p10 from '../assets/images/products/p10.jpg';
+import p11 from '../assets/images/products/p11.jpg';
+import p12 from '../assets/images/products/p12.jpg';
+
+
 const services = [
-  { img: "", title: "Stainless Steel Sheet/Plate" },
-  { img: "", title: "Stainless Steel Pipe/Tube" },
-  { img: "", title: "Stainless Steel Coil/Strip" },
-  { img: "", title: "Stainless Steel Bar/Rod" },
-  { img: "", title: "Steel Sheet/Plate" },
-  { img: "", title: "Steel Pipe/Tube" },
-  { img: "", title: "Steel Coil/Strip" },
-  { img: "", title: "Steel Profile" },
-  { img: "", title: "Galvanized Steel Sheet" },
-  { img: "", title: "Galvanized Steel Coil" },
-  { img: "", title: "PPGI Coil" },
-  { img: "", title: "Aluminum Sheet" },
+  { img: p1, title: "Stainless Steel Sheet/Plate" },
+  { img: p2, title: "Stainless Steel Pipe/Tube" },
+  { img: p3, title: "Stainless Steel Coil/Strip" },
+  { img: p4, title: "Stainless Steel Bar/Rod" },
+  { img: p5, title: "Steel Sheet/Plate" },
+  { img: p6, title: "Steel Pipe/Tube" },
+  { img: p7, title: "Steel Coil/Strip" },
+  { img: p8, title: "Steel Profile" },
+  { img: p9, title: "Galvanized Steel Sheet" },
+  { img: p10, title: "Galvanized Steel Coil" },
+  { img: p11, title: "PPGI Coil" },
+  { img: p12, title: "Aluminum Sheet" },
 ];
+
 
 const OurServices = () => {
   return (
