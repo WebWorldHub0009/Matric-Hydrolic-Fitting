@@ -10,34 +10,34 @@ import heroImage from "../assets/images/man22.png";
 
 const testimonials = [
   {
-    name: "Aman Joshi",
+    name: "Rakesh Verma",
     feedback:
-      "Pramod Travels made our family trip smooth and memorable. Their punctuality and driver professionalism stood out!",
+      "Matric Hydraulic Fittings has become our go-to for precision metal components. Their stainless steel fittings perform flawlessly under high pressure—exactly what our manufacturing line needs.",
   },
   {
-    name: "Divya Singh",
+    name: "Sonal Patel",
     feedback:
-      "Best travel service I’ve used in North India! Clean cars, friendly drivers, and easy booking process.",
+      "Their galvanized coils are top-notch—durable, uniform, and always delivered on time. Matric’s commitment to quality sets them apart in the industry.",
   },
   {
-    name: "Harsh Mehta",
+    name: "Vikram Sinha",
     feedback:
-      "Great experience for a last-minute airport transfer. The car arrived within 15 minutes. Highly recommended!",
+      "From hydraulic elbows to steel pipes, Matric’s attention to engineering detail is second to none. Every shipment speaks of consistency and quality.",
   },
   {
-    name: "Neha Kapoor",
+    name: "Anita Malhotra",
     feedback:
-      "Loved the outstation tour! The driver was polite, well-versed with the route, and drove safely all the way.",
+      "Reliability is rare in this sector, but Matric delivers every time. Their metal solutions have improved our assembly line efficiency significantly.",
   },
   {
-    name: "Rahul Taneja",
+    name: "Dhruv Nair",
     feedback:
-      "Very professional and courteous service. Would definitely book again for my next business trip.",
+      "We’ve used fittings from global brands, but Matric easily matches—and often exceeds—them. Their legacy in steel isn’t just a phrase, it’s a standard.",
   },
   {
-    name: "Sanya Bhardwaj",
+    name: "Meena Khurana",
     feedback:
-      "The team helped plan my entire trip to Agra and Jaipur. Truly seamless and enjoyable. 5 stars!",
+      "Our partnership with Matric has streamlined our procurement process. The quality of their hydraulic components ensures fewer replacements and longer machine uptime.",
   },
 ];
 
@@ -45,8 +45,6 @@ const Testimonials = () => {
   const sliderSettings = {
     dots: false,
     infinite: true,
-    vertical: true,
-    verticalSwiping: true,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
@@ -55,21 +53,24 @@ const Testimonials = () => {
     pauseOnHover: true,
     arrows: false,
     cssEase: "ease-in-out",
+    vertical: true,
+    verticalSwiping: true,
     responsive: [
       {
-        breakpoint: 768,
-        settings: { slidesToShow: 2 },
-      },
-      {
-        breakpoint: 480,
-        settings: { slidesToShow: 1 },
+        breakpoint: 768, // Mobile and below
+        settings: {
+          vertical: false,
+          verticalSwiping: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
       },
     ],
   };
 
   return (
     <section className="relative w-full bg-gradient-to-b from-[#fffef5] to-[#fdfae6] text-gray-800 py-20 px-4 md:px-12 overflow-hidden">
-      {/* Glowing background blobs */}
+      {/* Glowing Background Blobs */}
       <div className="absolute -top-24 -left-24 w-[300px] h-[300px] rounded-full blur-3xl z-0"
         style={{
           background: "radial-gradient(circle, rgba(255,215,0,0.4), rgba(230,194,0,0.1))",
@@ -85,17 +86,17 @@ const Testimonials = () => {
 
       {/* Heading */}
       <div className="text-center mb-12 space-y-3 relative z-10">
-        <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-blue-700">
-          What <span className="text-yellow-600">They Say</span> About Us
+        <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-[#333]">
+          What <span className="text-yellow-400">They Say</span> About Us
         </h2>
         <p className="text-gray-600 max-w-xl mx-auto text-sm md:text-base">
-          Genuine stories from riders who’ve experienced seamless travel with Pramod Travels.
+          Hear from businesses powered by Matric Hydraulic Fittings' engineering excellence.
         </p>
       </div>
 
-      {/* Content layout */}
+      {/* Main Content */}
       <div className="flex flex-col md:flex-row gap-10 items-center md:items-stretch relative z-10">
-        {/* Left: Fully visible image */}
+        {/* Image */}
         <div className="w-full md:w-1/2 relative flex justify-center items-center">
           <motion.div
             className="w-full max-w-[90%] overflow-hidden"
@@ -106,23 +107,23 @@ const Testimonials = () => {
             <img
               src={heroImage}
               alt="Testimonial"
-              className="w-full h-400px md:h-[550px] object-contain"
+              className="w-full h-auto md:h-[550px] object-contain"
             />
           </motion.div>
 
-          {/* Floating badge */}
+          {/* Floating Badge */}
           <motion.div
             className="absolute top-6 left-6 bg-white/80 text-black px-4 py-2 rounded-xl text-sm font-semibold backdrop-blur-md border border-gray-200 shadow-md"
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            Trusted By 10,000+ Riders
+            Trusted by 10,000+ Clients
           </motion.div>
         </div>
 
-        {/* Right: Testimonials */}
-        <div className="w-full md:w-1/2">
+        {/* Testimonials Slider */}
+        <div className="w-full md:w-1/2 max-w-full">
           <Slider {...sliderSettings}>
             {testimonials.map((t, i) => (
               <div key={i} className="px-3">
@@ -134,14 +135,14 @@ const Testimonials = () => {
                   transition={{ duration: 0.6 }}
                   className="bg-white border border-yellow-100 p-6 rounded-3xl shadow-sm hover:shadow-yellow-100/40 transition-all duration-500 flex flex-col gap-4 min-h-[180px]"
                 >
-                  <div className="flex gap-1 text-blue-600 animate-glowStars">
+                  <div className="flex gap-1 text-yellow-500 animate-glowStars">
                     {[...Array(5)].map((_, i) => (
                       <FaStar key={i} />
                     ))}
                   </div>
                   <p className="text-sm text-gray-700 leading-relaxed">{t.feedback}</p>
                   <div className="flex items-center gap-3 mt-auto">
-                    <FaUserCircle className="text-blue-600 text-2xl" />
+                    <FaUserCircle className="text-yellow-500 text-2xl" />
                     <h4 className="font-semibold">{t.name}</h4>
                   </div>
                 </motion.div>
@@ -151,7 +152,7 @@ const Testimonials = () => {
         </div>
       </div>
 
-      {/* Inline keyframes */}
+      {/* Inline CSS */}
       <style>{`
         @keyframes spinSlow {
           0% { transform: rotate(0deg); }

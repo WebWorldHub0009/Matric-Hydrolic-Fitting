@@ -132,23 +132,22 @@ const FAQ = () => {
 
   return (
     <section
-      className="w-full py-24 px-4 md:px-10 text-white relative bg-no-repeat bg-cover"
+      className="w-full py-20 px-4 md:px-10 text-white relative bg-no-repeat bg-cover"
       style={{
         backgroundImage: `url(${bgImage})`,
         backgroundAttachment: "fixed",
       }}
     >
-      <div className="absolute inset-0 bg-[#0000007d] z-0" />
+      <div className="absolute inset-0 bg-black/70 z-0" />
       <div className="relative z-10 max-w-7xl mx-auto">
-       <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
-  Got Questions?{" "}
-  <span className="text-[#FFD700]">We’ve Got Clear Answers</span>
-</h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-14 leading-snug">
+          Got Questions?{" "}
+          <span className="text-yellow-400">We’ve Got Clear Answers</span>
+        </h2>
 
-
-        <div className="flex flex-col md:flex-row gap-8">
+        <div className="flex flex-col lg:flex-row gap-10">
           {/* Sidebar */}
-          <div className="md:w-1/4 flex md:flex-col gap-4 md:sticky top-24">
+          <div className="lg:w-1/4 flex flex-row lg:flex-col gap-4 overflow-x-auto pb-2 lg:pb-0">
             {faqData.map((cat, index) => (
               <button
                 key={index}
@@ -156,10 +155,10 @@ const FAQ = () => {
                   setActiveCategory(index);
                   setOpenIndex(null);
                 }}
-                className={`flex items-center gap-3 px-4 py-3 rounded-lg text-left transition-all duration-300 text-sm md:text-base font-medium ${
+                className={`flex items-center gap-2 whitespace-nowrap px-4 py-2 md:py-4 rounded-full lg:rounded-lg text-sm font-medium transition-all ${
                   activeCategory === index
-                    ? "bg-[#FFD700] text-black shadow-lg"
-                    : "bg-transparent text-gray-400 hover:text-white hover:bg-[#1e1e1e]"
+                    ? "bg-yellow-900 text-black shadow-lg"
+                    : "bg-[#1e1e1e] text-gray-300 hover:text-white hover:bg-yellow-500/10"
                 }`}
               >
                 {cat.icon}
@@ -168,8 +167,8 @@ const FAQ = () => {
             ))}
           </div>
 
-          {/* Questions */}
-          <div className="md:w-3/4 space-y-6">
+          {/* FAQ Content */}
+          <div className="lg:w-3/4 space-y-6">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeCategory}
@@ -183,15 +182,15 @@ const FAQ = () => {
                   <motion.div
                     key={index}
                     layout
-                    className="bg-[#101010] border border-[#2a2a2a] rounded-xl p-5 transition-all"
+                    className="bg-black/30 border border-yellow-500/10 rounded-xl p-5 transition-all"
                     whileHover={{ scale: 1.01 }}
                   >
                     <button
-                      className="w-full flex justify-between items-center text-left font-semibold text-lg text-white"
+                      className="w-full flex justify-between items-center text-left font-semibold text-base sm:text-lg"
                       onClick={() => handleOpen(index)}
                     >
                       {item.q}
-                      <span className="text-[#FFD700] text-xl font-bold">
+                      <span className="text-yellow-400 text-xl font-bold">
                         {openIndex === index ? "−" : "+"}
                       </span>
                     </button>
@@ -203,7 +202,7 @@ const FAQ = () => {
                           animate={{ opacity: 1, height: "auto" }}
                           exit={{ opacity: 0, height: 0 }}
                           transition={{ duration: 0.3 }}
-                          className="text-gray-300 mt-3 text-sm leading-relaxed overflow-hidden"
+                          className="text-gray-200 mt-3 text-sm sm:text-base leading-relaxed overflow-hidden"
                         >
                           {item.a}
                         </motion.p>
