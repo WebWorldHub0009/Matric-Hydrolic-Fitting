@@ -7,17 +7,17 @@ const data = [
   {
     title: "Vision",
     text: "To be the most trusted name in hydraulic fittings worldwide.",
-    icon: <FaEye size={30} className="text-yellow-400 glow" />,
+    icon: <FaEye size={30} className="text-blue-700 glow" />,
   },
   {
     title: "Mission",
     text: "Deliver precision metal components with unmatched reliability and quality.",
-    icon: <FaBullseye size={30} className="text-yellow-400 glow" />,
+    icon: <FaBullseye size={30} className="text-blue-700 glow" />,
   },
   {
     title: "Goal",
     text: "Empower industries through sustainable and innovative solutions.",
-    icon: <FaFlagCheckered size={30} className="text-yellow-400 glow" />,
+    icon: <FaFlagCheckered size={30} className="text-blue-700 glow" />,
   },
 ];
 
@@ -29,7 +29,7 @@ const VisionMissionGoal = () => {
         className="absolute -top-24 -left-24 w-[300px] h-[300px] rounded-full blur-3xl z-0"
         style={{
           background:
-            "radial-gradient(circle, rgba(255,215,0,0.4), rgba(230,194,0,0.1))",
+            "radial-gradient(circle, rgba(0,6,215,0.1), rgba(230,194,0,0.1))",
           animation: "spinSlow 20s linear infinite",
         }}
       />
@@ -57,7 +57,7 @@ const VisionMissionGoal = () => {
             transition={{ duration: 0.6, delay: index * 0.2 }}
           >
             <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} glareEnable={false}>
-              <div className="relative group p-[3px] rounded-3xl bg-gradient-to-br from-yellow-400 via-yellow-200 to-yellow-400 hover:shadow-xl transition-all duration-500">
+              <div className="relative group p-[3px] rounded-3xl bg-gradient-to-br from-black via-[#3d3d3d] to-[#616161] hover:shadow-xl transition-all duration-500">
                 <div className="bg-white rounded-3xl p-8 h-full flex flex-col justify-center items-center text-center backdrop-blur-md group-hover:shadow-2xl transition-all duration-500">
                   <div className="mb-4">{item.icon}</div>
                   <h3 className="text-xl font-bold text-[#0057A8] mb-3 tracking-wide">
@@ -97,7 +97,7 @@ const VisionMissionGoal = () => {
         </div>
 
         {/* Animated horizontal line */}
-        <div className="absolute top-1/2 left-0 w-full h-[2px] bg-gradient-to-r from-[#0057A8] via-transparent to-[#FFD700] animate-lineFlow opacity-40" />
+        <div className="absolute top-1/2 left-0 w-full h-[2px] bg-gradient-to-r from-[#0057A8] via-transparent to-[#000000] animate-lineFlow opacity-40" />
       </div>
 
       {/* Inline CSS Animations */}

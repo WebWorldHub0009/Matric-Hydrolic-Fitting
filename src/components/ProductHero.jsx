@@ -1,6 +1,7 @@
 import React from "react";
 import heroImage from "../assets/images/product-bg.png"; // Floating product image
 import bgImage from "../assets/images/about-bg1.jpg";    // Background
+import { Link } from "react-router-dom";
 
 const ProductHero = () => {
   return (
@@ -15,19 +16,21 @@ const ProductHero = () => {
         <div className="flex-1 order-1 md:order-none">
           <h1 className="text-4xl md:text-5xl font-extrabold text-blue-600 leading-tight mb-6">
             Precision in Every{" "}
-            <span className="text-[#FFD700]">Connection</span>
+            <span className="text-[#ffffff]">Connection</span>
           </h1>
           <p className="text-gray-300 text-lg mb-8 max-w-xl">
             Discover a full range of{" "}
-            <span className="text-[#FFD700] font-medium">
+            <span className="text-[#2515b9] font-medium">
               Hydraulic Fittings, Pipes, Hoses
             </span>{" "}
             and industrial solutions designed to perform under pressure. Built
             for durability, engineered for reliability.
           </p>
-          <button className="bg-[#FFD700] text-[#1A1A1A] px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-white transition duration-300">
-            Explore Products
+          <Link to='/gallery'>
+            <button className="cursor-pointer bg-white text-[#1A1A1A] px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-blue-600 transition duration-300">
+            Explore Gallery
           </button>
+          </Link>
         </div>
 
         {/* Right Image */}

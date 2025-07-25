@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import img1 from "../assets/images/hero/h2.avif";
 import img2 from "../assets/images/hero/h3.jpg";
 import img3 from "../assets/images/hero/h4.avif";
+import { Link } from "react-router-dom";
 
 const images = [img1, img2, img3];
 
@@ -21,8 +22,8 @@ const HeroSection = () => {
   return (
     <section className="w-full min-h-[90vh] flex flex-col md:flex-row bg-gradient-to-r from-[#F5F5F5] to-white relative">
       {/* Floating Circular SVG */}
-      <div className="absolute -top-16 -left-16 w-64 h-64 bg-gradient-to-br from-[#FFD700]/40 to-[#E6C200]/20 rounded-full blur-2xl opacity-70 animate-pulse"></div>
-      <div className="absolute bottom-10 left-20 w-40 h-40 border-4 border-[#FFD700]/50 rounded-full animate-spin-slow"></div>
+      {/* <div className="absolute -top-16 -left-16 w-64 h-64 bg-gradient-to-br from-[#00257463] to-[#E6C200]/20 rounded-full blur-2xl opacity-70 animate-pulse"></div> */}
+      <div className="absolute bottom-10 left-20 w-40 h-40 border-4 border-[#00257413] rounded-full animate-spin-slow"></div>
 
       {/* Left Side Content */}
       <div className="w-full md:w-[40vw] flex flex-col justify-center px-10 md:px-16 py-12 relative z-10">
@@ -37,7 +38,7 @@ const HeroSection = () => {
         </motion.span>
 
         {/* Decorative Line */}
-        <span className="absolute top-10 left-0 w-1 h-20 bg-gradient-to-b from-[#FFD700] to-[#E6C200] rounded-full"></span>
+        <span className="absolute top-10 left-0 w-1 h-20 bg-gradient-to-b from-[#1100ff] to-[#100055] rounded-full"></span>
 
         <motion.h1
           className="text-4xl md:text-6xl font-extrabold text-[#0057A8] leading-snug mt-4"
@@ -46,7 +47,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8 }}
         >
           Precision in{" "}
-          <span className="bg-gradient-to-r from-[#FFD700] to-[#E6C200] bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-[#181818] to-[#646464] bg-clip-text text-transparent">
             Every Fitting
           </span>
         </motion.h1>
@@ -62,14 +63,16 @@ const HeroSection = () => {
           reliability in every industrial application.
         </motion.p>
 
+        <Link to='/products'>
         <motion.button
-          className="mt-8 px-7 py-3 text-lg font-semibold rounded-lg bg-white/20 backdrop-blur-md border border-[#FFD700] text-[#1A1A1A] shadow-md hover:shadow-[#FFD700]/50 hover:bg-[#FFD700] hover:text-black transition-all duration-300"
+          className="cursor-pointer mt-8 px-7 py-3 text-lg font-semibold rounded-lg bg-white/20 backdrop-blur-md border border-[#0300b8] text-[#1A1A1A] shadow-md hover:shadow-[#FFD700]/50 hover:bg-blue-800 hover:text-black transition-all duration-300"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
         >
           Explore Products
         </motion.button>
+        </Link>
       </div>
 
       {/* Right Side Slider */}

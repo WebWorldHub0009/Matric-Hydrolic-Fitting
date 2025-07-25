@@ -12,7 +12,7 @@ import bgImage from "../assets/images/bg6.jpg";
 const faqData = [
   {
     category: "Services",
-    icon: <FaCarSide size={20} className="text-yellow-400" />,
+    icon: <FaCarSide size={20} className="text-gray-500" />,
     questions: [
       {
         q: "What services does Pramod Travels offer?",
@@ -34,7 +34,7 @@ const faqData = [
   },
   {
     category: "Safety",
-    icon: <FaUserShield size={20} className="text-yellow-400" />,
+    icon: <FaUserShield size={20} className="text-gray-500" />,
     questions: [
       {
         q: "Are your drivers verified?",
@@ -56,7 +56,7 @@ const faqData = [
   },
   {
     category: "Destinations",
-    icon: <FaMapMarkedAlt size={20} className="text-yellow-400" />,
+    icon: <FaMapMarkedAlt size={20} className="text-gray-500" />,
     questions: [
       {
         q: "Which destinations are covered?",
@@ -78,7 +78,7 @@ const faqData = [
   },
   {
     category: "Payments",
-    icon: <FaWallet size={20} className="text-yellow-400" />,
+    icon: <FaWallet size={20} className="text-gray-500" />,
     questions: [
       {
         q: "What payment methods do you accept?",
@@ -100,7 +100,7 @@ const faqData = [
   },
   {
     category: "Support",
-    icon: <FaHeadset size={20} className="text-yellow-400" />,
+    icon: <FaHeadset size={20} className="text-gray-500" />,
     questions: [
       {
         q: "How can I contact customer support?",
@@ -142,7 +142,7 @@ const FAQ = () => {
       <div className="relative z-10 max-w-7xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-14 leading-snug">
           Got Questions?{" "}
-          <span className="text-yellow-400">We’ve Got Clear Answers</span>
+          <span className="text-gray-500">We’ve Got Clear Answers</span>
         </h2>
 
         <div className="flex flex-col lg:flex-row gap-10">
@@ -190,7 +190,7 @@ const FAQ = () => {
                       onClick={() => handleOpen(index)}
                     >
                       {item.q}
-                      <span className="text-yellow-400 text-xl font-bold">
+                      <span className="text-gray-500 text-xl font-bold">
                         {openIndex === index ? "−" : "+"}
                       </span>
                     </button>

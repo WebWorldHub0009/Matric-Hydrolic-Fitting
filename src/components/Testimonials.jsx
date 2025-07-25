@@ -87,7 +87,7 @@ const Testimonials = () => {
       {/* Heading */}
       <div className="text-center mb-12 space-y-3 relative z-10">
         <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-blue-700">
-          What <span className="text-yellow-400">They Say</span> About Us
+          What <span className="text-black">They Say</span> About Us
         </h2>
         <p className="text-gray-600 max-w-xl mx-auto text-sm md:text-base">
           Hear from businesses powered by Matric Hydraulic Fittings' engineering excellence.
@@ -135,14 +135,14 @@ const Testimonials = () => {
                   transition={{ duration: 0.6 }}
                   className="bg-white border border-yellow-100 p-6 rounded-3xl shadow-sm hover:shadow-yellow-100/40 transition-all duration-500 flex flex-col gap-4 min-h-[180px]"
                 >
-                  <div className="flex gap-1 text-yellow-500 animate-glowStars">
+                  <div className="flex gap-1 text-blue-700 animate-glowStars">
                     {[...Array(5)].map((_, i) => (
                       <FaStar key={i} />
                     ))}
                   </div>
                   <p className="text-sm text-gray-700 leading-relaxed">{t.feedback}</p>
                   <div className="flex items-center gap-3 mt-auto">
-                    <FaUserCircle className="text-yellow-500 text-2xl" />
+                    <FaUserCircle className="text-blue-700 text-2xl" />
                     <h4 className="font-semibold">{t.name}</h4>
                   </div>
                 </motion.div>

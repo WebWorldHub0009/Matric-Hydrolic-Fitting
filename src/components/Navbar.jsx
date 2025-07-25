@@ -43,7 +43,7 @@ const MatricNavbar = () => {
   return (
     <>
       {/* Top Info Bar */}
-      <div className="w-full bg-[#1A1A1A] text-xs text-[#FFD700] py-1 px-4 text-center tracking-wide font-semibold">
+      <div className="w-full bg-[#1A1A1A] text-xs text-[#ffffff] py-1 px-4 text-center tracking-wide font-semibold">
         ⚙️ Matric Hydraulic Fittings | Reliable Industrial Solutions | Call +91 9876543210
       </div>
 
@@ -53,7 +53,7 @@ const MatricNavbar = () => {
           {/* Left Social Links */}
           <div className="hidden md:flex gap-4 text-[#0057A8] text-lg">
             {socialLinks.map((item, idx) => (
-              <a key={idx} href={item.url} target="_blank" rel="noreferrer" className="hover:text-[#FFD700] transition">
+              <a key={idx} href={item.url} target="_blank" rel="noreferrer" className="hover:text-[#000000] transition">
                 {item.icon}
               </a>
             ))}
@@ -63,7 +63,7 @@ const MatricNavbar = () => {
           <div className="flex items-center gap-2">
             <img src={logo} alt="Matric Logo" className="w-16 md:w-20 object-contain" />
             <span className="text-[#0057A8] font-extrabold text-xl md:text-2xl uppercase">
-              Matric <span className="text-[#FFD700]">Hydraulic</span>
+              {/* Matric <span className="text-[#FFD700]">Hydraulic</span> */}
             </span>
           </div>
 
@@ -73,7 +73,7 @@ const MatricNavbar = () => {
               <input
                 type="text"
                 placeholder="Search..."
-                className="px-4 py-2 text-sm rounded-full border border-gray-300 shadow-inner focus:ring-2 focus:ring-[#FFD700] outline-none transition"
+                className="px-4 py-2 text-sm rounded-full border border-gray-300 shadow-inner focus:ring-1 focus:ring-[#1b1eb4] outline-none transition"
               />
               <FaSearch className="absolute right-4 top-3 text-[#0057A8]" />
             </div>
@@ -89,7 +89,7 @@ const MatricNavbar = () => {
             <Link
               key={link.name}
               to={link.path}
-              className="flex items-center gap-2 hover:text-[#FFD700] transition"
+              className="flex items-center gap-2 hover:text-[#000000] transition"
             >
               {link.icon} {link.name}
             </Link>

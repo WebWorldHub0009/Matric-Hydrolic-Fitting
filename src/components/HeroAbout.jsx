@@ -56,7 +56,7 @@ const HeroAbout = () => {
       {/* Text Section */}
       <div className="w-full md:w-[50%] px-8 md:px-16 py-20 flex flex-col justify-center z-10 relative">
         <motion.span
-          className="uppercase tracking-widest text-sm text-[#f1ff27] font-medium"
+          className="uppercase tracking-widest text-sm text-[#ffffff] font-medium"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -66,10 +66,10 @@ const HeroAbout = () => {
 
 <h1 className="text-3xl md:text-6xl font-extrabold text-[#0057A8] leading-14 mt-4 min-h-[110px] md:min-h-[130px]">
   {normalPart}
-  <span className="bg-gradient-to-r from-[#FFD700] to-[#E6C200] bg-clip-text text-transparent">
+  <span className="bg-gradient-to-r from-[#ffffff] to-[#bbbbbb] bg-clip-text text-transparent">
     {highlightedPart}
   </span>
-  <span className="text-[#FFD700] animate-pulse inline-block w-[1ch]">|</span>
+  <span className="text-[#ffffff] animate-pulse inline-block w-[1ch]">|</span>
 </h1>
 
         <motion.p
@@ -84,7 +84,7 @@ const HeroAbout = () => {
         </motion.p>
 
         <motion.button
-          className="mt-8 px-7 py-3 text-lg font-semibold rounded-lg bg-white/20 backdrop-blur-md border border-[#FFD700] text-white shadow-md hover:shadow-[#FFD700]/50 hover:bg-[#FFD700] hover:text-black transition-all duration-300 w-fit"
+          className="cursor-pointer mt-8 px-7 py-3 text-lg font-semibold rounded-lg bg-white/20 backdrop-blur-md border border-[#1c42c0] text-white shadow-md hover:shadow-[#FFD700]/50 hover:bg-[#001aff] hover:text-black transition-all duration-300 w-fit"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4 }}

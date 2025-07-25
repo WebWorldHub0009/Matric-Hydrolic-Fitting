@@ -2,13 +2,11 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   FaCogs, FaToolbox, FaWrench, FaBolt, FaWater,
-  FaLayerGroup, FaChevronRight, FaTimesCircle
+  FaLayerGroup, FaChevronRight, FaTimesCircle, FaCheckCircle
 } from "react-icons/fa";
 
 import ProductHero from "../components/ProductHero";
-// import placeholder from "../assets/images/product-bg.png";
 import productDetails from "../data/productDetails";
-// At the top of ProductPage.jsx
 import p1 from "../assets/images/productsPage/p1.png";
 import p2 from "../assets/images/productsPage/p2.png";
 import p3 from "../assets/images/productsPage/p3.png";
@@ -30,8 +28,9 @@ import p18 from "../assets/images/productsPage/18.png";
 import p19 from "../assets/images/productsPage/19.png";
 import p20 from "../assets/images/productsPage/20.png";
 import p21 from "../assets/images/productsPage/21.png";
+import { Link } from "react-router-dom";
+// import WhyUs from "../components/WhyUs";
 
-// All Products
 const allProducts = [
   {
     name: "Hydraulic Ferule Fittings",
@@ -202,8 +201,6 @@ const allProducts = [
     shortDescription: "Two-part clamp for rapid pipe installation and maintenance...",
   },
 ];
-
-
 const categories = ["All", "Fittings", "Sheets & Coils", "Clamps"];
 
 const ProductPage = () => {
@@ -224,7 +221,9 @@ const ProductPage = () => {
       <section className="w-full min-h-screen bg-[#F7F8FA] text-[#1A1A1A] px-4 py-20 md:px-10 lg:px-20">
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-4">
           <h2 className="text-4xl md:text-5xl font-extrabold leading-tight text-[#4400ff]">
-            Premium <span className="text-[#FFD700]">Industrial Components</span>
+            Premium <span className="bg-gradient-to-r from-[#181818] to-[#646464] bg-clip-text text-transparent">
+              Industrial Components
+            </span>
           </h2>
           <p className="text-gray-600 text-base md:text-lg">
             Explore our high-performance hydraulic and metal solutions built for durability and reliability.
@@ -237,8 +236,8 @@ const ProductPage = () => {
                 className={`px-5 py-2 rounded-full font-semibold text-sm transition-all border
                   ${
                     activeCategory === cat
-                      ? "bg-[#FFD700] text-[#1A1A1A] border-transparent"
-                      : "bg-white text-gray-600 border-gray-300 hover:bg-[#FFF7CC]"
+                      ? "bg-blue-200 text-[#1A1A1A] border-transparent"
+                      : "bg-white text-gray-600 border-gray-300 hover:bg-blue-100"
                   }`}
               >
                 {cat}
@@ -247,7 +246,6 @@ const ProductPage = () => {
           </div>
         </div>
 
-        {/* Product Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {filteredProducts.map((product, i) => {
             const [Tag1Icon, Tag2Icon] = product.icons;
@@ -262,17 +260,16 @@ const ProductPage = () => {
                 className="cursor-pointer bg-white border border-gray-200 rounded-2xl shadow hover:shadow-lg p-5 flex flex-col items-center text-center transition duration-300 hover:scale-[1.02]"
               >
                 <img
-  src={product.image}
-  alt={product.name}
-  className="w-28 h-28 object-contain mb-4"
-/>
-<h3 className="text-lg font-bold text-[#1A1A1A] mb-1">
-  {product.name}
-</h3>
-<p className="text-gray-500 text-sm mb-3 line-clamp-1">
-  {product.shortDescription}
-</p>
-
+                  src={product.image}
+                  alt={product.name}
+                  className="w-28 h-28 object-contain mb-4"
+                />
+                <h3 className="text-lg font-bold text-[#1A1A1A] mb-1">
+                  {product.name}
+                </h3>
+                <p className="text-gray-500 text-sm mb-3 line-clamp-1">
+                  {product.shortDescription}
+                </p>
                 <div className="flex gap-2 text-sm text-gray-600 mb-5">
                   <span className="flex items-center gap-1 bg-yellow-100 px-2 py-1 rounded-full">
                     <Tag1Icon /> {product.tags[0]}
@@ -281,7 +278,7 @@ const ProductPage = () => {
                     <Tag2Icon /> {product.tags[1]}
                   </span>
                 </div>
-                <button className="mt-auto flex items-center gap-2 text-white bg-[#0010f3] px-4 py-2 rounded-full font-semibold hover:bg-[#fbe36b] transition">
+                <button className="mt-auto flex items-center gap-2 text-white bg-[#0010f3] px-4 py-2 rounded-full font-semibold hover:bg-blue-300 hover:text-black transition">
                   View Details <FaChevronRight className="text-sm" />
                 </button>
               </motion.div>
@@ -290,41 +287,41 @@ const ProductPage = () => {
         </div>
       </section>
 
-      {/* Modal */}
+      
+       
+      
+
       <AnimatePresence>
         {selectedProduct && (
           <motion.div
-            className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-50 flex justify-center items-center px-4"
+            className="fixed inset-0  bg-opacity-50 backdrop-blur-lg z-50 flex justify-center items-center px-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
             <motion.div
-              initial={{ scale: 0.8, y: 50 }}
+              initial={{ scale: 0.9, y: 40 }}
               animate={{ scale: 1, y: 0 }}
-              exit={{ scale: 0.8, y: 50 }}
-              transition={{ type: "spring", stiffness: 200, damping: 25 }}
-              className="bg-white w-full max-w-4xl rounded-xl overflow-hidden relative grid md:grid-cols-2 shadow-lg"
+              exit={{ scale: 0.9, y: 40 }}
+              transition={{ type: "spring", stiffness: 200, damping: 20 }}
+              className="bg-white w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-xl shadow-lg relative grid md:grid-cols-2 sm:grid-cols-1"
             >
-              {/* Close */}
               <button
-                className="absolute top-4 right-4 text-gray-600 hover:text-red-500 text-xl"
+                className="absolute top-4 right-4 text-gray-600 hover:text-red-500 text-xl z-10"
                 onClick={closeModal}
               >
                 <FaTimesCircle />
               </button>
 
-              {/* Left Image */}
               <div className="bg-[#F7F8FA] flex justify-center items-center p-6">
                 <img
-                  src={productDetails[selectedProduct]?.image || placeholder}
+                  src={productDetails[selectedProduct]?.image}
                   alt={selectedProduct}
                   className="w-full max-w-xs object-contain"
                 />
               </div>
 
-              {/* Right Info */}
-              <div className="p-6 flex flex-col justify-center">
+              <div className="p-6 flex flex-col justify-center text-center md:text-left">
                 <h3 className="text-2xl font-bold text-[#1A1A1A] mb-4">
                   {productDetails[selectedProduct]?.name}
                 </h3>
@@ -333,15 +330,20 @@ const ProductPage = () => {
                 </p>
                 <div className="grid grid-cols-2 gap-3 mb-6">
                   {productDetails[selectedProduct]?.features?.map((f, i) => (
-                    <div key={i} className="flex items-center gap-2 bg-gray-100 px-3 py-2 rounded-md text-sm text-gray-700">
-                      <f.icon className="text-[#FFD700]" />
+                    <div
+                      key={i}
+                      className="flex items-center gap-2 bg-gray-100 px-3 py-2 rounded-md text-sm text-gray-700"
+                    >
+                      <f.icon className="text-black" />
                       {f.label}
                     </div>
                   ))}
                 </div>
-                <button className="bg-[#FFD700] text-[#1A1A1A] px-6 py-2 rounded-full font-semibold hover:bg-[#ffe861] transition-all">
+                <Link to='/contact'>
+                <button className="cursor-pointer bg-[#0044ff] text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-300 hover:text-black transition-all">
                   Get Enquiry
                 </button>
+                </Link>
               </div>
             </motion.div>
           </motion.div>
