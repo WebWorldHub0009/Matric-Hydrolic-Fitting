@@ -7,6 +7,7 @@ import Footer from './components/Footer'
 import FloatingButton from './components/FloatingButtons'
 import ScrollToTop from './components/ScrollToTop'
 import About from './pages/About'
+import Products from './pages/Products'
 
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
    <Routes>
     <Route path='/' element={<Home/>}/>
     <Route path='/about' element={<About/>}/>
+    <Route path='/products' element={<Products/>}/>
    </Routes>
    <FloatingButton/>
    <Footer/>

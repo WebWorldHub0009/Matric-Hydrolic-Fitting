@@ -86,7 +86,7 @@ const Testimonials = () => {
 
       {/* Heading */}
       <div className="text-center mb-12 space-y-3 relative z-10">
-        <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-[#333]">
+        <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-blue-700">
           What <span className="text-yellow-400">They Say</span> About Us
         </h2>
         <p className="text-gray-600 max-w-xl mx-auto text-sm md:text-base">
