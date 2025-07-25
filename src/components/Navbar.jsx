@@ -2,7 +2,10 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {
   FaFacebookF, FaYoutube, FaInstagram, FaSearch, FaBars, FaTimes,
-  FaHome, FaInfoCircle, FaCogs, FaPhoneAlt, FaVideo, FaSignOutAlt
+  FaHome, FaInfoCircle, FaCogs, FaPhoneAlt, FaVideo, FaSignOutAlt,
+  FaCamera,
+  FaCertificate,
+  FaFile
 } from "react-icons/fa";
 import logo from "../assets/images/logo.png";
 
@@ -30,8 +33,9 @@ const MatricNavbar = () => {
     { name: "Home", path: "/", icon: <FaHome /> },
     { name: "About Us", path: "/about", icon: <FaInfoCircle /> },
     { name: "Products", path: "/products", icon: <FaCogs /> }, // updated here
-    { name: "Showcase", path: "/video", icon: <FaVideo /> },
+    { name: "Showcase", path: "/showcase", icon: <FaCamera /> },
     { name: "Contact", path: "/contact", icon: <FaPhoneAlt /> },
+    { name: "Certificates", path: "/certificates", icon: <FaFile /> },
   ];
 
   const socialLinks = [

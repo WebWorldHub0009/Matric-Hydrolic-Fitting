@@ -25,7 +25,7 @@ export default function ContactUs() {
           <div className="bg-blue-700 text-white px-8 py-12 relative md:w-1/2 w-full rounded-2xl md:rounded-r-none">
             <h3 className="text-2xl font-bold mb-4">Matric Hydraulic Fittings</h3>
             <p className="text-white/90 text-base mb-6">
-              Established in 2014, we are a trusted manufacturer and supplier of hydraulic components including PVC Clamps, O Ring Nipples, Bulkhead Fittings, Metal Flanges, Elbow Fittings, Dowty Seals, Copper Washers, Needle Valves, Socket Weld Unions, Banjo Bolts, Steel Tees, and more.
+              Established in 1994, we are a trusted manufacturer and supplier of hydraulic components including PVC Clamps, O Ring Nipples, Bulkhead Fittings, Metal Flanges, Elbow Fittings, Dowty Seals, Copper Washers, Needle Valves, Socket Weld Unions, Banjo Bolts, Steel Tees, and more.
               <br />
               <br />
               Backed by a robust infrastructure in New Delhi and led by our Director <strong>Naveen Gola</strong>, we proudly serve clients under the brand name <strong>MHF</strong>.

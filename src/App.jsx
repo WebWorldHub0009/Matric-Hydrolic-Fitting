@@ -9,6 +9,8 @@ import ScrollToTop from './components/ScrollToTop'
 import About from './pages/About'
 import Products from './pages/Products'
 import ContactUs from './pages/ContactUs'
+import PremiumGallery from './pages/PremiumGallery'
+import Certificates from './pages/Certificates'
 
 
 const App = () => {
@@ -22,6 +24,8 @@ const App = () => {
     <Route path='/about' element={<About/>}/>
     <Route path='/products' element={<Products/>}/>
     <Route path='/contact' element={<ContactUs/>}/>
+    <Route path='/showcase' element={<PremiumGallery/>}/>
+    <Route path='/certificates' element={<Certificates/>}/>
    </Routes>
    <FloatingButton/>
    <Footer/>
