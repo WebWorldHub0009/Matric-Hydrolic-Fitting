@@ -139,7 +139,7 @@ export default function Footer() {
             {[
               ["Home", "/"],
               ["About Us", "/about"],
-              ["Services", "/services"],
+              ["Products", "/products"],
               ["Gallery", "/gallery"],
               ["Contact", "/contact"],
               ["Certificates", "/certificates"]
