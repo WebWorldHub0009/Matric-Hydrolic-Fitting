@@ -4,32 +4,32 @@ import { FaDollarSign, FaChartLine, FaCogs, FaLock, FaBoxes, FaHeadset } from "r
 const WhyChooseUs = () => {
   const features = [
     {
-      icon: <FaDollarSign className="text-3xl text-[#FFD700]" />,
+      icon: <FaDollarSign className="text-3xl text-white" />,
       title: "Instant Savings",
       desc: "Get immediate savings on every purchase, powered by precision engineering and reliability."
     },
     {
-      icon: <FaChartLine className="text-3xl text-[#FFD700]" />,
+      icon: <FaChartLine className="text-3xl text-white" />,
       title: "Real-Time Insights",
       desc: "Make smarter decisions with detailed performance data and actionable insights."
     },
     {
-      icon: <FaBoxes className="text-3xl text-[#FFD700]" />,
+      icon: <FaBoxes className="text-3xl text-white" />,
       title: "Flexible Solutions",
       desc: "Choose custom solutions tailored to your needs, offering scalability and cost-effectiveness."
     },
     {
-      icon: <FaLock className="text-3xl text-[#FFD700]" />,
+      icon: <FaLock className="text-3xl text-white" />,
       title: "Secure & Durable",
       desc: "Prioritize safety and long-lasting performance with our high-quality hydraulic fittings."
     },
     {
-      icon: <FaCogs className="text-3xl text-[#FFD700]" />,
+      icon: <FaCogs className="text-3xl text-white" />,
       title: "Adaptive Engineering",
       desc: "We evolve our designs with cutting-edge technology to ensure maximum efficiency."
     },
     {
-      icon: <FaHeadset className="text-3xl text-[#FFD700]" />,
+      icon: <FaHeadset className="text-3xl text-white" />,
       title: "Dedicated Support",
       desc: "Access expert assistance 24/7 to ensure your operations never face downtime."
     }
@@ -51,9 +51,9 @@ const WhyChooseUs = () => {
           {features.map((feature, idx) => (
             <div
               key={idx}
-              className="bg-gradient-to-br from-[#2A2A2A] to-[#1A1A1A] border border-[#FFD700]/20 p-6 rounded-2xl shadow-md hover:shadow-lg hover:shadow-[#FFD700]/20 transition-all duration-300 group"
+              className="bg-gradient-to-br from-[#2A2A2A] to-[#1A1A1A] border border-[#0004ff]/20 p-6 rounded-2xl shadow-md hover:shadow-lg hover:shadow-[#0004ff]/20 transition-all duration-300 group"
             >
-              <div className="flex items-center justify-center mx-auto w-14 h-14 mb-4 rounded-full bg-[#FFD700]/10 group-hover:bg-[#FFD700]/20 transition">
+              <div className="flex items-center justify-center mx-auto w-14 h-14 mb-4 rounded-full bg-black group-hover:bg-zinc-900 transition">
                 {feature.icon}
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>

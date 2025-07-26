@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 // Replace these with your product images
-import img1 from "../assets/images/hero/h2.avif";
+import img1 from "../assets/images/hero/herofittings.png";
 import img2 from "../assets/images/hero/h3.jpg";
 import img3 from "../assets/images/hero/h4.avif";
+import img4 from "../assets/images/hero/h2.avif";
 import { Link } from "react-router-dom";
 
-const images = [img1, img2, img3];
+const images = [img1, img2, img3, img4];
 
 const HeroSection = () => {
   const [current, setCurrent] = useState(0);
@@ -100,7 +101,7 @@ const HeroSection = () => {
               key={idx}
               className={`w-3.5 h-3.5 rounded-full cursor-pointer transition-all duration-300 ${
                 idx === current
-                  ? "bg-[#FFD700] shadow-lg shadow-[#FFD700]/70 scale-110"
+                  ? "bg-[#0400ff] shadow-lg shadow-[#FFD700]/70 scale-110"
                   : "bg-white/50"
               }`}
               onClick={() => setCurrent(idx)}

@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 
 export default function VisitorCounter() {
   const [count, setCount] = useState(() => {
-    return parseInt(localStorage.getItem("visitor-count") || "0001");
+    const stored = localStorage.getItem("visitor-count");
+    return stored ? parseInt(stored, 10) : 1;
   });
 
   useEffect(() => {
@@ -11,10 +12,12 @@ export default function VisitorCounter() {
     setCount(newCount);
   }, []);
 
+  const formattedCount = count.toString().padStart(4, "0");
+
   return (
-    <div className="text-yellow-800 text-sm md:text-base font-medium text-center mx-2">
+    <div className="text-blue-800 text-sm md:text-base font-medium text-center mx-2">
       Visitor Count:{" "}
-      <span className="text-black font-semibold">{count.toLocaleString()}</span>
+      <span className="text-black font-semibold">{formattedCount}</span>
     </div>
   );
 }

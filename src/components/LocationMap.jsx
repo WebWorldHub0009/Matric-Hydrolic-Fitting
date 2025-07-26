@@ -70,7 +70,7 @@ export default function LocationMap() {
 
           <a
     href="tel:+917838277868"
-    className="inline-flex w-[120px] md:w-[150px] items-center gap-3 bg-blue-700 text-white px-4 py-3 rounded-lg shadow-md hover:bg-blue-800 hover:scale-105 transition-all duration-300 text-lg font-semibold focus:outline-none focus:ring-4 focus:ring-blue-300"
+    className="inline-flex w-[150px] m-auto md:m-0 mt-6 md:mt-2 md:w-[150px] items-center gap-3 bg-blue-700 text-white px-4 py-3 rounded-lg shadow-md hover:bg-blue-800 hover:scale-105 transition-all duration-300 text-lg font-semibold focus:outline-none focus:ring-4 focus:ring-blue-300"
   >
     <FaPhone className="text-xl" />
     <span>Call Now</span>
@@ -79,26 +79,25 @@ export default function LocationMap() {
 
         {/* Right Map Block */}
         <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="rounded-3xl shadow-2xl overflow-hidden flex-1"
-        >
-          <div className="w-full h-full min-h-[500px]">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d112074.71321824692!2d76.96005259246542!3d28.619726585532028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x390d051ea0d1029f%3A0x245118ba8838ad!2sMetro%20Pillar%20No.%20742%2C%20A-83%2C%20Gulab%20Bagh%2C%20Nawada%2C%20Uttam%20Nagar%2C%20New%20Delhi%2C%20Delhi%20110059!3m2!1d28.6197515!2d77.04245399999999!5e0!3m2!1sen!2sin!4v1753442383969!5m2!1sen!2sin"
-              width="100%"
-              height="100%"
-              className="w-full h-full"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Matric Hydraulic Location"
-            ></iframe>
-          </div>
-        </motion.div>
+  initial={{ opacity: 0, x: 40 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8 }}
+  viewport={{ once: true }}
+  className="rounded-3xl shadow-2xl overflow-hidden flex-1 h-[400px] sm:h-[500px] md:h-full"
+>
+  <div className="w-full h-full">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d112074.71321824692!2d76.96005259246542!3d28.619726585532028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x390d051ea0d1029f%3A0x245118ba8838ad!2sMetro%20Pillar%20No.%20742%2C%20A-83%2C%20Gulab%20Bagh%2C%20Nawada%2C%20Uttam%20Nagar%2C%20New%20Delhi%2C%20Delhi%20110059!3m2!1d28.6197515!2d77.04245399999999!5e0!3m2!1sen!2sin!4v1753442383969!5m2!1sen!2sin"
+      className="w-full h-full"
+      style={{ border: 0 }}
+      allowFullScreen=""
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+      title="Matric Hydraulic Location"
+    ></iframe>
+  </div>
+</motion.div>
+
       </div>
     </section>
   );

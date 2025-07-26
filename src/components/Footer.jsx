@@ -164,8 +164,17 @@ export default function Footer() {
                 href="mailto:matrichydraulicfittings@gmail.com"
                 className="flex items-center space-x-2 hover:text-[#0057A8] transition duration-300"
               >
-                <FaEnvelope className="text-[#FFD700]" />
+                <FaEnvelope className="text-[#001aff]" />
                 <span>matrichydraulicfittings@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="mailto:info@matrichydraulicfittings.com"
+                className="flex items-center space-x-2 hover:text-[#0057A8] transition duration-300"
+              >
+                <FaEnvelope className="text-[#2600ff]" />
+                <span>info@matrichydraulicfittings.com</span>
               </a>
             </li>
           </ul>
@@ -178,21 +187,20 @@ export default function Footer() {
           </h4>
           <ul className="space-y-2">
             {[
-              "Air Cooled Oil Coolers",
-              "Hydraulic Cylinders",
-              "Air Coolers",
-              "Hydraulic Power Packs",
-              "Heat Exchangers",
-              "Hydraulic Jacks",
-              "Pneumatic Cylinders",
-              "Warm Gear Screw Jacks",
-              "Oil Coolers",
-              "Hydraulic Pumps",
-              "Scrap Baling Presses",
+              "Hydraulic Fittings",
+              "SS Fittings",
+              "Equal Tee",
+              "Swivel Elbow",
+              "Male Connector",
+              "Stainless Steel Pipe",
+              "Galvanized Steel Coil",
+              "Galvanized Steel Sheet",
+              "Hydrulic PVC Clamp",
+              "Split Type Clamp",
             ].map((service, i) => (
               <li key={i}>
                 <Link
-                  to="/services"
+                  to="/products"
                   className="text-sm hover:text-[#0057A8] transition duration-300"
                 >
                   {service}
@@ -214,11 +222,9 @@ export default function Footer() {
           </p>
 
           <h2 className="text-[#1A1A1A] mt-6 text-base font-semibold">
-            Owners
+            Contact :
           </h2>
-          <p className="text-sm text-gray-700">
-            Navin Kumar Gola <br /> Manoj Kumar Gola
-          </p>
+          
           <p className="mt-2 text-sm text-gray-700">
             +91 99585 60708 <br /> +91 78382 77868
           </p>

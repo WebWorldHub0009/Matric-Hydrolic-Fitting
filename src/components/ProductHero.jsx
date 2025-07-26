@@ -1,5 +1,5 @@
 import React from "react";
-import heroImage from "../assets/images/product-bg.png"; // Floating product image
+import heroImage from "../assets/images/prohd.png"; // Floating product image
 import bgImage from "../assets/images/about-bg1.jpg";    // Background
 import { Link } from "react-router-dom";
 
@@ -26,7 +26,7 @@ const ProductHero = () => {
             and industrial solutions designed to perform under pressure. Built
             for durability, engineered for reliability.
           </p>
-          <Link to='/gallery'>
+          <Link to='/showcase'>
             <button className="cursor-pointer bg-white text-[#1A1A1A] px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-blue-600 transition duration-300">
             Explore Gallery
           </button>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import bgImage from "../assets/images/aboutbg3.jpg";
 import foregroundImage from "../assets/images/steel-worker.png";
+import { Link } from "react-router-dom";
 
 const headings = [
   { main: "Precision in ", highlight: "Every Fit" },
@@ -83,14 +84,16 @@ const HeroAbout = () => {
           galvanized coils—with unmatched reliability and quality.
         </motion.p>
 
+        <Link to='/products'>
         <motion.button
           className="cursor-pointer mt-8 px-7 py-3 text-lg font-semibold rounded-lg bg-white/20 backdrop-blur-md border border-[#1c42c0] text-white shadow-md hover:shadow-[#FFD700]/50 hover:bg-[#001aff] hover:text-black transition-all duration-300 w-fit"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
         >
-          Learn More About Us
+          Explore Products
         </motion.button>
+        </Link>
       </div>
 
       {/* Static Floating Image */}
