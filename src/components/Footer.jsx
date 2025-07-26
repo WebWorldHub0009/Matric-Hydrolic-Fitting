@@ -14,7 +14,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import VisitorCounter from "./VisitorCounter";
 import Translator from "./Translator";
-// import logo from '../assets/images/logo-matrics.png';
+import logo from '../assets/images/logo3d.png';
 
 const containerVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -52,7 +52,7 @@ export default function Footer() {
         <div className="transition duration-500 ease-in-out hover:scale-[1.01] flex flex-col space-y-3">
           <div className="flex justify-start">
             <img
-              src={""}
+              src={logo}
               alt="Matrics Hydraulic Fittings"
               className="w-[140px] md:w-[160px]"
             />
@@ -142,6 +142,7 @@ export default function Footer() {
               ["Services", "/services"],
               ["Gallery", "/gallery"],
               ["Contact", "/contact"],
+              ["Certificates", "/certificates"]
             ].map(([text, link], i) => (
               <li key={i}>
                 <Link
@@ -225,8 +226,9 @@ export default function Footer() {
           <h2 className="text-[#1A1A1A] mt-6 text-base font-semibold">
             Translator
           </h2>
-          <div className="w-full flex flex-col items-start space-y-4">
-            <Translator className="mr-6" />
+          <div className="flex">
+            <Translator />
+            <div className="w-32 md:w-18"></div>
           </div>
         </div>
       </div>

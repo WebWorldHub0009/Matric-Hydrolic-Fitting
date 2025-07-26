@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 export default function VisitorCounter() {
   const [count, setCount] = useState(() => {
-    return parseInt(localStorage.getItem("visitor-count") || "8798");
+    return parseInt(localStorage.getItem("visitor-count") || "0001");
   });
 
   useEffect(() => {
